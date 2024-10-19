@@ -24,3 +24,9 @@ document.querySelectorAll('.toggleBtn').forEach(button => {
         moves.push(obj);
     });
 });
+
+function disableBut() {
+    document.querySelectorAll('.toggleBtn').forEach(button => {
+        button.disabled = true;
+    });
+}
