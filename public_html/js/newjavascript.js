@@ -22,6 +22,7 @@ document.querySelectorAll('.toggleBtn').forEach(button => {
             document.getElementById("text").textContent = "Ход крестика";
         }
         moves.push(obj);
+        check();
     });
 });
 
@@ -70,4 +71,15 @@ function check() {
     else if (moves.length === 9) {
         document.getElementById("text").textContent = "Ничья";
     }
+}
+
+function rerun() {
+    document.querySelectorAll('.toggleBtn').forEach(button => {
+        button.textContent = '1';
+        button.style.color = 'lightcyan';
+        button.disabled = false;
+    });
+    moves = [];
+    key = 0;
+    document.getElementById("text").textContent = "Ход крестика";
 }
